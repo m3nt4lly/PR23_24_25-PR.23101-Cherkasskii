@@ -1,4 +1,4 @@
-package com.example.pr23_23101_fi
+﻿package com.example.pr23_23101
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
@@ -15,10 +15,10 @@ fun MainDashboardScreen() {
     var selectedTab by remember { mutableIntStateOf(0) }
 
     val tabs = listOf(
-        Pair("Анализы", Icons.Default.Analytics),
-        Pair("Результаты", Icons.Default.Description),
-        Pair("Поддержка", Icons.Default.HeadsetMic),
-        Pair("Профиль", Icons.Default.Person)
+        Pair("РђРЅР°Р»РёР·С‹", Icons.Default.Analytics),
+        Pair("Р РµР·СѓР»СЊС‚Р°С‚С‹", Icons.Default.Description),
+        Pair("РџРѕРґРґРµСЂР¶РєР°", Icons.Default.HeadsetMic),
+        Pair("РџСЂРѕС„РёР»СЊ", Icons.Default.Person)
     )
 
     Scaffold(
@@ -48,7 +48,7 @@ fun MainDashboardScreen() {
             when (selectedTab) {
                 0 -> AnalysesScreen()
                 else -> Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                    Text("Экран в разработке", color = Color.Gray)
+                    Text("Р­РєСЂР°РЅ РІ СЂР°Р·СЂР°Р±РѕС‚РєРµ", color = Color.Gray)
                 }
             }
         }

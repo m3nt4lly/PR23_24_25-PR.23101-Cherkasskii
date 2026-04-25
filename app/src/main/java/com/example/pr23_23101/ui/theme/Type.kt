@@ -1,4 +1,4 @@
-package com.example.pr23_23101_fi.ui.theme
+﻿package com.example.pr23_23101.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

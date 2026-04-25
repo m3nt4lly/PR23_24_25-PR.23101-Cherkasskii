@@ -1,4 +1,4 @@
-package com.example.pr23_23101_fi
+﻿package com.example.pr23_23101
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -27,15 +27,15 @@ fun CreatePasswordScreen(
     ) {
         Box(modifier = Modifier.fillMaxWidth().padding(24.dp)) {
             Text(
-                "Пропустить",
+                "РџСЂРѕРїСѓСЃС‚РёС‚СЊ",
                 color = Color(0xFF0560FA),
                 modifier = Modifier.align(Alignment.CenterEnd).clickable { onNavigateToCard() }
             )
         }
 
         Spacer(modifier = Modifier.height(20.dp))
-        Text("Создайте пароль", fontSize = 24.sp, fontWeight = FontWeight.Bold)
-        Text("Для защиты ваших персональных данных", color = Color.Gray, fontSize = 14.sp)
+        Text("РЎРѕР·РґР°Р№С‚Рµ РїР°СЂРѕР»СЊ", fontSize = 24.sp, fontWeight = FontWeight.Bold)
+        Text("Р”Р»СЏ Р·Р°С‰РёС‚С‹ РІР°С€РёС… РїРµСЂСЃРѕРЅР°Р»СЊРЅС‹С… РґР°РЅРЅС‹С…", color = Color.Gray, fontSize = 14.sp)
 
         Spacer(modifier = Modifier.height(40.dp))
 
@@ -54,7 +54,7 @@ fun CreatePasswordScreen(
 
         Spacer(modifier = Modifier.weight(1f))
 
-        val keys = listOf("1", "2", "3", "4", "5", "6", "7", "8", "9", "", "0", "⌫")
+        val keys = listOf("1", "2", "3", "4", "5", "6", "7", "8", "9", "", "0", "вЊ«")
         keys.chunked(3).forEach { row ->
             Row(horizontalArrangement = Arrangement.spacedBy(20.dp)) {
                 row.forEach { key ->
@@ -66,7 +66,7 @@ fun CreatePasswordScreen(
                                 .size(80.dp)
                                 .background(Color(0xFFF5F5F5), shape = CircleShape)
                                 .clickable {
-                                    if (key == "⌫") {
+                                    if (key == "вЊ«") {
                                         if (pin.isNotEmpty()) pin = pin.dropLast(1)
                                     } else if (pin.length < 4) {
                                         pin += key

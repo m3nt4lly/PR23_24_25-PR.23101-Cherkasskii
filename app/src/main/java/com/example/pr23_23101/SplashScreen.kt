@@ -1,4 +1,4 @@
-package com.example.pr23_23101_fi
+﻿package com.example.pr23_23101
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -30,7 +30,7 @@ fun SplashScreen(
         contentAlignment = Alignment.Center
     ) {
         Text(
-            text = "Смартлаб+",
+            text = "РЎРјР°СЂС‚Р»Р°Р±+",
             fontSize = 32.sp,
             fontWeight = FontWeight.Bold,
             color = Color.White

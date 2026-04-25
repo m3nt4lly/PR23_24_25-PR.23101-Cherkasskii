@@ -1,4 +1,4 @@
-package com.example.pr23_23101_fi
+﻿package com.example.pr23_23101
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -16,3 +16,4 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+

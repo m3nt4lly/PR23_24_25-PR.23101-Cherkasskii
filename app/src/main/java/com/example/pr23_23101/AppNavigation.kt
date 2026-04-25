@@ -1,4 +1,4 @@
-package com.example.pr23_23101_fi
+﻿package com.example.pr23_23101
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -25,13 +25,13 @@ fun AppNavigation() {
     var showSplash by remember { mutableStateOf(true) }
 
     if (showSplash) {
-        // Показываем заставку
+        // РџРѕРєР°Р·С‹РІР°РµРј Р·Р°СЃС‚Р°РІРєСѓ
         SplashScreen(onSplashComplete = { showSplash = false })
     } else {
-        // Основная навигация
+        // РћСЃРЅРѕРІРЅР°СЏ РЅР°РІРёРіР°С†РёСЏ
         NavHost(navController = navController, startDestination = AppRoute.Onboarding) {
 
-            // 1. Онбординг (Onboard 1, 2, 3)
+            // 1. РћРЅР±РѕСЂРґРёРЅРі (Onboard 1, 2, 3)
             composable(AppRoute.Onboarding) {
                 OnboardingScreen(
                     onSkip = { navController.navigateSingleTopTo(AppRoute.Login) },
@@ -39,27 +39,27 @@ fun AppNavigation() {
                 )
             }
 
-            // 2. Вход и регистрация
+            // 2. Р’С…РѕРґ Рё СЂРµРіРёСЃС‚СЂР°С†РёСЏ
             composable(AppRoute.Login) {
                 LoginScreen(onNavigateToEmailCode = { navController.navigateSingleTopTo(AppRoute.EmailCode) })
             }
 
-            // 3. Код из Email
+            // 3. РљРѕРґ РёР· Email
             composable(AppRoute.EmailCode) {
                 EmailCodeScreen(onNavigateToCreatePassword = { navController.navigateSingleTopTo(AppRoute.CreatePassword) })
             }
 
-            // 4. Создание пароля
+            // 4. РЎРѕР·РґР°РЅРёРµ РїР°СЂРѕР»СЏ
             composable(AppRoute.CreatePassword) {
                 CreatePasswordScreen(onNavigateToCard = { navController.navigateSingleTopTo(AppRoute.CreateCard) })
             }
 
-            // 5. Карта пациента
+            // 5. РљР°СЂС‚Р° РїР°С†РёРµРЅС‚Р°
             composable(AppRoute.CreateCard) {
                 CreatePatientCardScreen(onNavigateToMain = { navController.navigateSingleTopTo(AppRoute.Dashboard) })
             }
 
-            // 6. Главный экран
+            // 6. Р“Р»Р°РІРЅС‹Р№ СЌРєСЂР°РЅ
             composable(AppRoute.Dashboard) {
                 MainDashboardScreen()
             }

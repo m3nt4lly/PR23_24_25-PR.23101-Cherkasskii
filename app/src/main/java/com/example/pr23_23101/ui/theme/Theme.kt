@@ -1,4 +1,4 @@
-package com.example.pr23_23101_fi.ui.theme
+﻿package com.example.pr23_23101.ui.theme
 
 import android.app.Activity
 import android.os.Build
@@ -34,7 +34,7 @@ private val LightColorScheme = lightColorScheme(
 )
 
 @Composable
-fun Pr2323101fiTheme(
+fun Pr2323101Theme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
     dynamicColor: Boolean = true,

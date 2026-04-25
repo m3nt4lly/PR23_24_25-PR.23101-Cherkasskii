@@ -1,4 +1,4 @@
-package com.example.pr23_23101_fi
+﻿package com.example.pr23_23101
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
@@ -53,7 +53,7 @@ fun OnboardingScreen(
                     .padding(16.dp)
             ) {
                 Text(
-                    text = "Пропустить",
+                    text = "РџСЂРѕРїСѓСЃС‚РёС‚СЊ",
                     color = Color(0xFF4A90E2),
                     fontSize = 16.sp
                 )
@@ -110,7 +110,7 @@ fun OnboardingScreen(
                 )
             ) {
                 Text(
-                    text = if (pagerState.currentPage < onboardingPages.size - 1) "Далее" else "Завершить",
+                    text = if (pagerState.currentPage < onboardingPages.size - 1) "Р”Р°Р»РµРµ" else "Р—Р°РІРµСЂС€РёС‚СЊ",
                     fontSize = 16.sp
                 )
             }

@@ -1,4 +1,4 @@
-package com.example.pr23_23101_fi
+﻿package com.example.pr23_23101
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -48,7 +48,7 @@ import androidx.compose.ui.unit.sp
 @Composable
 fun AnalysesScreen() {
     var searchQuery by remember { mutableStateOf("") }
-    var selectedCategory by remember { mutableStateOf("Популярные") }
+    var selectedCategory by remember { mutableStateOf("РџРѕРїСѓР»СЏСЂРЅС‹Рµ") }
 
     Scaffold(
         topBar = {
@@ -67,7 +67,7 @@ fun AnalysesScreen() {
                 OutlinedTextField(
                     value = searchQuery,
                     onValueChange = { },
-                    placeholder = { Text("Искать анализы") },
+                    placeholder = { Text("РСЃРєР°С‚СЊ Р°РЅР°Р»РёР·С‹") },
                     leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(16.dp),
@@ -81,10 +81,10 @@ fun AnalysesScreen() {
             }
 
             item {
-                Text("Акции и новости", fontSize = 20.sp, fontWeight = FontWeight.Bold)
+                Text("РђРєС†РёРё Рё РЅРѕРІРѕСЃС‚Рё", fontSize = 20.sp, fontWeight = FontWeight.Bold)
                 Spacer(modifier = Modifier.height(12.dp))
                 LazyRow(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                    items(listOf("Чек-ап для мужчин", "Подарочный сертификат")) { title ->
+                    items(listOf("Р§РµРє-Р°Рї РґР»СЏ РјСѓР¶С‡РёРЅ", "РџРѕРґР°СЂРѕС‡РЅС‹Р№ СЃРµСЂС‚РёС„РёРєР°С‚")) { title ->
                         Card(
                             modifier = Modifier.width(250.dp).height(120.dp),
                             shape = RoundedCornerShape(16.dp),
@@ -101,7 +101,7 @@ fun AnalysesScreen() {
 
             item {
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    listOf("Популярные", "Скид", "Комплексные").forEach { cat ->
+                    listOf("РџРѕРїСѓР»СЏСЂРЅС‹Рµ", "РЎРєРёРґ", "РљРѕРјРїР»РµРєСЃРЅС‹Рµ").forEach { cat ->
                         FilterChip(
                             selected = selectedCategory == cat,
                             onClick = { selectedCategory = cat },
@@ -118,9 +118,9 @@ fun AnalysesScreen() {
             }
 
             val mockAnalyses = listOf(
-                Triple("ПЦР-тест на определение РНК коронавируса", "1800 Р", "2 дня"),
-                Triple("Клинический анализ крови с лейкоцитарной формулой", "690 Р", "1 день"),
-                Triple("Биохимический анализ крови, базовый", "2440 Р", "1 день")
+                Triple("РџР¦Р -С‚РµСЃС‚ РЅР° РѕРїСЂРµРґРµР»РµРЅРёРµ Р РќРљ РєРѕСЂРѕРЅР°РІРёСЂСѓСЃР°", "1800 Р ", "2 РґРЅСЏ"),
+                Triple("РљР»РёРЅРёС‡РµСЃРєРёР№ Р°РЅР°Р»РёР· РєСЂРѕРІРё СЃ Р»РµР№РєРѕС†РёС‚Р°СЂРЅРѕР№ С„РѕСЂРјСѓР»РѕР№", "690 Р ", "1 РґРµРЅСЊ"),
+                Triple("Р‘РёРѕС…РёРјРёС‡РµСЃРєРёР№ Р°РЅР°Р»РёР· РєСЂРѕРІРё, Р±Р°Р·РѕРІС‹Р№", "2440 Р ", "1 РґРµРЅСЊ")
             )
 
             items(mockAnalyses) { (name, price, time) ->
@@ -133,7 +133,7 @@ fun AnalysesScreen() {
                         Text(name, fontSize = 16.sp, fontWeight = FontWeight.Medium)
                         Row(modifier = Modifier.fillMaxWidth().padding(top = 12.dp), horizontalArrangement = Arrangement.SpaceBetween) {
                             Column {
-                                Text("Срок", fontSize = 12.sp, color = Color.Gray)
+                                Text("РЎСЂРѕРє", fontSize = 12.sp, color = Color.Gray)
                                 Text(time, fontSize = 14.sp, fontWeight = FontWeight.Bold)
                             }
                             Row {
@@ -145,7 +145,7 @@ fun AnalysesScreen() {
                                     colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF0560FA)),
                                     shape = RoundedCornerShape(12.dp)
                                 ) {
-                                    Text("Добавить")
+                                    Text("Р”РѕР±Р°РІРёС‚СЊ")
                                 }
                             }
                         }

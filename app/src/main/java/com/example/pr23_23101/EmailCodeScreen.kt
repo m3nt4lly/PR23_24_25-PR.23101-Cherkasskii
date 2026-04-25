@@ -1,4 +1,4 @@
-package com.example.pr23_23101_fi
+﻿package com.example.pr23_23101
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -56,7 +56,7 @@ fun EmailCodeScreen(
         Text("<", fontSize = 24.sp, modifier = Modifier.align(Alignment.Start).padding(start = 24.dp).clickable { })
 
         Spacer(modifier = Modifier.height(24.dp))
-        Text("Введите код из E-mail", fontSize = 20.sp, fontWeight = FontWeight.Bold)
+        Text("Р’РІРµРґРёС‚Рµ РєРѕРґ РёР· E-mail", fontSize = 20.sp, fontWeight = FontWeight.Bold)
 
         Spacer(modifier = Modifier.height(32.dp))
 
@@ -81,12 +81,12 @@ fun EmailCodeScreen(
         }
 
         Spacer(modifier = Modifier.height(16.dp))
-        Text("Отправить код повторно можно будет через $timeLeft секунд", color = Color.Gray, fontSize = 14.sp)
+        Text("РћС‚РїСЂР°РІРёС‚СЊ РєРѕРґ РїРѕРІС‚РѕСЂРЅРѕ РјРѕР¶РЅРѕ Р±СѓРґРµС‚ С‡РµСЂРµР· $timeLeft СЃРµРєСѓРЅРґ", color = Color.Gray, fontSize = 14.sp)
 
         Spacer(modifier = Modifier.weight(1f))
 
         // Custom Keyboard
-        val keys = listOf("1", "2", "3", "4", "5", "6", "7", "8", "9", "", "0", "⌫")
+        val keys = listOf("1", "2", "3", "4", "5", "6", "7", "8", "9", "", "0", "вЊ«")
         keys.chunked(3).forEach { row ->
             Row(horizontalArrangement = Arrangement.spacedBy(20.dp)) {
                 row.forEach { key ->
@@ -98,7 +98,7 @@ fun EmailCodeScreen(
                                 .size(80.dp)
                                 .background(Color(0xFFF5F5F5), shape = RoundedCornerShape(40.dp))
                                 .clickable {
-                                    if (key == "⌫") {
+                                    if (key == "вЊ«") {
                                         if (code.isNotEmpty()) code = code.dropLast(1)
                                     } else if (code.length < 4) {
                                         code += key
@@ -109,14 +109,14 @@ fun EmailCodeScreen(
                                 },
                             contentAlignment = Alignment.Center
                         ) {
-                            if (key == "⌫") {
-                                Text("⌫", fontSize = 24.sp)
+                            if (key == "вЊ«") {
+                                Text("вЊ«", fontSize = 24.sp)
                             } else {
                                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
                                     Text(key, fontSize = 24.sp, fontWeight = FontWeight.Bold)
                                     if (key == "2") Text("ABC", fontSize = 10.sp, color = Color.Gray)
                                     if (key == "3") Text("DEF", fontSize = 10.sp, color = Color.Gray)
-                                    // ... можно добавить остальные буквы
+                                    // ... РјРѕР¶РЅРѕ РґРѕР±Р°РІРёС‚СЊ РѕСЃС‚Р°Р»СЊРЅС‹Рµ Р±СѓРєРІС‹
                                 }
                             }
                         }

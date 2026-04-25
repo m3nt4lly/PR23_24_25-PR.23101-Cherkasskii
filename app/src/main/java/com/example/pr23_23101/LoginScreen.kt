@@ -1,4 +1,4 @@
-package com.example.pr23_23101_fi
+﻿package com.example.pr23_23101
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -27,15 +27,15 @@ fun LoginScreen(
     ) {
         Spacer(modifier = Modifier.height(40.dp))
 
-        Text("👋", fontSize = 40.sp)
+        Text("рџ‘‹", fontSize = 40.sp)
         Text(
-            "Добро пожаловать!",
+            "Р”РѕР±СЂРѕ РїРѕР¶Р°Р»РѕРІР°С‚СЊ!",
             fontSize = 28.sp,
             fontWeight = FontWeight.Bold,
             color = Color(0xFF141414)
         )
         Text(
-            "Войдите, чтобы пользоваться функциями приложения",
+            "Р’РѕР№РґРёС‚Рµ, С‡С‚РѕР±С‹ РїРѕР»СЊР·РѕРІР°С‚СЊСЃСЏ С„СѓРЅРєС†РёСЏРјРё РїСЂРёР»РѕР¶РµРЅРёСЏ",
             fontSize = 16.sp,
             color = Color.Gray,
             modifier = Modifier.padding(top = 8.dp)
@@ -43,7 +43,7 @@ fun LoginScreen(
 
         Spacer(modifier = Modifier.height(40.dp))
 
-        Text("Вход по E-mail", color = Color.Gray, fontSize = 14.sp)
+        Text("Р’С…РѕРґ РїРѕ E-mail", color = Color.Gray, fontSize = 14.sp)
         OutlinedTextField(
             value = email,
             onValueChange = { email = it },
@@ -67,20 +67,20 @@ fun LoginScreen(
                 containerColor = if (isFormValid) Color(0xFF0560FA) else Color(0xFFE0E0E0)
             )
         ) {
-            Text("Далее", color = if (isFormValid) Color.White else Color.Gray)
+            Text("Р”Р°Р»РµРµ", color = if (isFormValid) Color.White else Color.Gray)
         }
 
         Spacer(modifier = Modifier.weight(1f))
 
         OutlinedButton(
-            onClick = { /* Логика Яндекс */ },
+            onClick = { /* Р›РѕРіРёРєР° РЇРЅРґРµРєСЃ */ },
             modifier = Modifier.fillMaxWidth().height(50.dp),
             shape = RoundedCornerShape(12.dp),
             colors = ButtonDefaults.outlinedButtonColors(
                 containerColor = Color.White
             )
         ) {
-            Text("Войти с Яндекс", color = Color.Black)
+            Text("Р’РѕР№С‚Рё СЃ РЇРЅРґРµРєСЃ", color = Color.Black)
         }
 
         Spacer(modifier = Modifier.height(20.dp))

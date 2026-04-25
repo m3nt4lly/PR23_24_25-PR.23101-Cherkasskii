@@ -1,4 +1,4 @@
-package com.example.pr23_23101_fi
+﻿package com.example.pr23_23101
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -19,18 +19,18 @@ fun CreatePatientCardScreen(
 ) {
     var name by remember { mutableStateOf("") }
     var surname by remember { mutableStateOf("") }
-    var birthDate by remember { mutableStateOf("28 февраля 1991") }
-    var gender by remember { mutableStateOf("Мужской") }
+    var birthDate by remember { mutableStateOf("28 С„РµРІСЂР°Р»СЏ 1991") }
+    var gender by remember { mutableStateOf("РњСѓР¶СЃРєРѕР№") }
 
     val isFormValid = name.isNotBlank() && surname.isNotBlank()
 
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Создание карты пациента", color = Color.Black) },
+                title = { Text("РЎРѕР·РґР°РЅРёРµ РєР°СЂС‚С‹ РїР°С†РёРµРЅС‚Р°", color = Color.Black) },
                 actions = {
                     TextButton(onClick = onNavigateToMain) {
-                        Text("Пропустить", color = Color(0xFF0560FA))
+                        Text("РџСЂРѕРїСѓСЃС‚РёС‚СЊ", color = Color(0xFF0560FA))
                     }
                 }
             )
@@ -39,20 +39,20 @@ fun CreatePatientCardScreen(
         Column(
             modifier = Modifier.fillMaxSize().padding(padding).padding(24.dp)
         ) {
-            Text("Без карты пациента вы не сможете заказать анализов...", color = Color.Gray, fontSize = 14.sp)
+            Text("Р‘РµР· РєР°СЂС‚С‹ РїР°С†РёРµРЅС‚Р° РІС‹ РЅРµ СЃРјРѕР¶РµС‚Рµ Р·Р°РєР°Р·Р°С‚СЊ Р°РЅР°Р»РёР·РѕРІ...", color = Color.Gray, fontSize = 14.sp)
             Spacer(modifier = Modifier.height(24.dp))
 
-            OutlinedTextField(value = name, onValueChange = { name = it }, label = { Text("Имя") }, modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(12.dp))
+            OutlinedTextField(value = name, onValueChange = { name = it }, label = { Text("РРјСЏ") }, modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(12.dp))
             Spacer(modifier = Modifier.height(12.dp))
-            OutlinedTextField(value = "", onValueChange = {}, label = { Text("Отчество") }, modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(12.dp))
+            OutlinedTextField(value = "", onValueChange = {}, label = { Text("РћС‚С‡РµСЃС‚РІРѕ") }, modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(12.dp))
             Spacer(modifier = Modifier.height(12.dp))
-            OutlinedTextField(value = surname, onValueChange = { surname = it }, label = { Text("Фамилия") }, modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(12.dp))
+            OutlinedTextField(value = surname, onValueChange = { surname = it }, label = { Text("Р¤Р°РјРёР»РёСЏ") }, modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(12.dp))
             Spacer(modifier = Modifier.height(12.dp))
 
             OutlinedTextField(
                 value = birthDate,
                 onValueChange = { birthDate = it },
-                label = { Text("Дата рождения") },
+                label = { Text("Р”Р°С‚Р° СЂРѕР¶РґРµРЅРёСЏ") },
                 modifier = Modifier.fillMaxWidth(),
                 shape = RoundedCornerShape(12.dp),
                 trailingIcon = { Icon(Icons.Default.CalendarToday, contentDescription = null) }
@@ -62,7 +62,7 @@ fun CreatePatientCardScreen(
             OutlinedTextField(
                 value = gender,
                 onValueChange = { gender = it },
-                label = { Text("Пол") },
+                label = { Text("РџРѕР»") },
                 modifier = Modifier.fillMaxWidth(),
                 shape = RoundedCornerShape(12.dp),
                 readOnly = true
@@ -77,7 +77,7 @@ fun CreatePatientCardScreen(
                 shape = RoundedCornerShape(12.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = if (isFormValid) Color(0xFF0560FA) else Color(0xFFE0E0E0))
             ) {
-                Text("Создать", color = if (isFormValid) Color.White else Color.Gray)
+                Text("РЎРѕР·РґР°С‚СЊ", color = if (isFormValid) Color.White else Color.Gray)
             }
             Spacer(modifier = Modifier.height(20.dp))
         }

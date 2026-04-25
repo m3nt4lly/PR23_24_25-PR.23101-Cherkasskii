@@ -1,17 +1,17 @@
-plugins {
+﻿plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
 }
 
 android {
-    namespace = "com.example.pr23_23101_fi"
+    namespace = "com.example.pr23_23101"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId = "com.example.pr23_23101_fi"
+        applicationId = "com.example.pr23_23101"
         minSdk = 31
         targetSdk = 36
         versionCode = 1
